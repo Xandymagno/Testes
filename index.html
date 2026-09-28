@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login do Dashboard de Produção Endisa">
+  <title>Login — Dashboard Endisa</title>
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <main class="login-caixa">
+
+    <!-- Marca: logo + título dentro do quadro vermelho -->
+    <div class="login-marca">
+      <div class="login-logo-texto">
+        <span class="logo-nome">ENDISA</span>
+        <span class="logo-sub">ENGENHARIA E MEIO AMBIENTE</span>
+      </div>
+      <h1 class="login-titulo">ACESSO RESTRITO</h1>
+    </div>
+
+    <form id="form-login" class="login-form">
+
+      <!-- Campo Usuário -->
+      <label class="login-campo">
+        <span>Usuário</span>
+
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+
+        <input type="text" id="campo-usuario" placeholder="Digite seu usuário ou e-mail"
+               autocomplete="username" required>
+      </label>
+
+      <!-- Campo Senha -->
+      <label class="login-campo">
+        <span>Senha</span>
+
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.7 1.3-3 3-3s3 1.3 3 3v2H9V6z"/>
+        </svg>
+
+        <input type="password" id="campo-senha" placeholder="Digite sua senha"
+               autocomplete="current-password" required>
+
+        <!-- Botão olho: mostra/oculta a senha -->
+        <button type="button" class="btn-olho" id="btn-olho" title="Mostrar senha">
+          <svg class="olho-aberto" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5zm0 12.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"/>
+          </svg>
+          <svg class="olho-fechado" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 6c3.8 0 7.2 2.4 9.4 6-2.2 3.6-5.6 6-9.4 6s-7.2-2.4-9.4-6C4.8 8.4 8.2 6 12 6zm0 10.5c2.5 0 4.5-2 4.5-4.5s-2-4.5-4.5-4.5-4.5 2-4.5 4.5 2 4.5 4.5 4.5zM2.4 3.7 3.7 2.4l17.9 17.9-1.3 1.3z"/>
+          </svg>
+        </button>
+      </label>
+
+      <!-- Mensagens de erro e sucesso -->
+      <p id="login-erro" class="login-erro oculto"></p>
+      <p id="login-sucesso" class="login-sucesso oculto"></p>
+
+      <!-- Botão Entrar -->
+      <button type="submit" class="login-botao" id="btn-entrar">Entrar</button>
+    </form>
+
+    <p class="login-rodape">Dashboard de Produção — km de supressão vegetal</p>
+  </main>
+
+ <!-- No index.html (login) -->
+<script src="js/loginapi.js"></script>
+<script src="js/login.js"></script>
+
+<!-- No dashboard.html -->
+<script src="js/loginapi.js"></script>
+<script src="js/auth.js"></script>
+<!-- ... resto igual -->
+</body>
+</html>
