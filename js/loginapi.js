@@ -23,6 +23,11 @@ const LoginAPI = {
    * Chama o Apps Script via POST
    * (usuário e senha nunca vão na URL)
    */
+
+
+  chamar(parametros) {
+    return this._chamar(parametros);
+  },
   async _chamar(parametros) {
     const corpo = new URLSearchParams(parametros);
     const resposta = await fetch(LOGIN_API_URL, {
@@ -134,6 +139,8 @@ const LoginAPI = {
       window.location.replace(PAGINA_LOGIN);
     }
   }
+
+
 };
 
 window.LoginAPI = LoginAPI;
